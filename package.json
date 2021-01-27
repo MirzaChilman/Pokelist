@@ -67,7 +67,9 @@
     "@emotion/react": "^11.1.4",
     "@types/react-router-dom": "^5.1.7",
     "antd": "^4.11.2",
+    "antd-dayjs-webpack-plugin": "^1.0.6",
     "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
     "react-router-dom": "^5.2.0",
     "unstated-next": "^1.1.0"
   }

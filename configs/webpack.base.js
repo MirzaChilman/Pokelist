@@ -1,5 +1,6 @@
 const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const AntdDayJs = require("antd-dayjs-webpack-plugin");
 
 module.exports = {
   resolve: {
@@ -30,7 +31,10 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "index.html.ejs" })],
+  plugins: [
+    new AntdDayJs(),
+    new HtmlWebpackPlugin({ template: "index.html.ejs" }),
+  ],
   externals: {
     react: "React",
     "react-dom": "ReactDOM",

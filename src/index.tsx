@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import { render } from "react-dom";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
@@ -16,5 +16,9 @@ render(
 );
 
 if (process.env.NODE_ENV === "production") {
-    require("offline-plugin/runtime").install(); // eslint-disable-line global-require
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/service-worker.js");
+    });
+  }
 }

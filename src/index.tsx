@@ -1,11 +1,10 @@
-import * as React from "react";
+import * as React from "react"
 import { render } from "react-dom";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import Store from "./containers/Store";
-import 'antd/dist/antd.css';
 
-const rootEl = document.getElementById("root");
+const rootEl = document.getElementById("app");
 
 render(
   <BrowserRouter>
@@ -15,3 +14,7 @@ render(
   </BrowserRouter>,
   rootEl
 );
+
+if (process.env.NODE_ENV === "production") {
+    require("offline-plugin/runtime").install(); // eslint-disable-line global-require
+}

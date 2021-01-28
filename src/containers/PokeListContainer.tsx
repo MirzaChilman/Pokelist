@@ -12,7 +12,7 @@ const Container = () => {
   const event = BaseAppEvent<EventTypes>()
 
   const tryBaseEvent  = () => {
-    event.emit("success", "It is a big success")
+    console.log("asdasd")
   }
 
 

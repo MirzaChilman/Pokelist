@@ -15,7 +15,7 @@ const App = () => {
           tryBaseEvent();
         }}
       >
-        Test Button
+        Test Button Uh yeah
       </button>
     </React.Suspense>
   );

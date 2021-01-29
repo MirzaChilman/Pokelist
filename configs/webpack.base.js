@@ -5,7 +5,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
-const AntdDayjsWebpackPlugin = require("antd-dayjs-webpack-plugin");
 
 module.exports = (options) => ({
   mode: options.mode,
@@ -99,14 +98,10 @@ module.exports = (options) => ({
         ],
       },
       {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(jpg|png|gif)$/i,
         use: [
           {
             loader: "url-loader",
-            options: {
-              // Inline files smaller than 10 kB
-              limit: 10 * 1024,
-            },
           },
           {
             loader: "image-webpack-loader",
@@ -125,7 +120,7 @@ module.exports = (options) => ({
                 optimizationLevel: 7,
               },
               pngquant: {
-                quality: "65-90",
+                quality: [.6, .9],
                 speed: 4,
               },
             },
@@ -155,7 +150,6 @@ module.exports = (options) => ({
       NODE_ENV: "development",
     }),
     new Dotenv(),
-    new AntdDayjsWebpackPlugin(),
   ]),
   resolve: {
     modules: ["node_modules", "app"],

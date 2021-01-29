@@ -10,11 +10,12 @@ module.exports = function addProdMiddlewares(app, options) {
   // smaller (applies also to assets). You can read more about that technique
   // and other good practices on official Express.js docs http://mxs.is/googmy
   app.use(compression());
-  console.log("publicPath", publicPath);
-  console.log("outputPath", outputPath);
+  app.use(express.static(publicPath))
   app.use(publicPath, express.static(outputPath));
 
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(outputPath, "index.html"))
-  );
+  app.get("*", (req, res) => {
+    console.log("publicPath", publicPath);
+    console.log("outputPath", outputPath);
+    res.sendFile(path.resolve(outputPath, "index.html"));
+  });
 };

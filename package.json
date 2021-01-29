@@ -66,6 +66,7 @@
     "rimraf": "^3.0.2",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
+    "surge": "^0.21.7",
     "terser-webpack-plugin": "^5.1.1",
     "ts-loader": "^8.0.14",
     "typescript": "^4.1.3",

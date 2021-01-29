@@ -5,7 +5,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
-const AntdDayjsWebpackPlugin = require("antd-dayjs-webpack-plugin");
 
 module.exports = (options) => ({
   mode: options.mode,
@@ -151,7 +150,6 @@ module.exports = (options) => ({
       NODE_ENV: "development",
     }),
     new Dotenv(),
-    new AntdDayjsWebpackPlugin(),
   ]),
   resolve: {
     modules: ["node_modules", "app"],

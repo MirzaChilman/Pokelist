@@ -1,13 +1,13 @@
 import * as React from "react";
-import { render } from "react-dom";
+import { hydrate, createPortal } from "react-dom";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import Store from "./containers/Store";
 
+import "./index.scss"
 const rootEl = document.getElementById("app");
-
-render(
-  <BrowserRouter>
+hydrate(
+  <BrowserRouter >
     <Store>
       <App />
     </Store>

@@ -1,8 +1,8 @@
 import * as React from "react";
-import PokeListContainer from "./PokeListContainer";
+import PokemonContainer from "./PokemonContainer/PokemonContainer";
 
 const Store = ({ children }: { children: any }) => {
-  return <PokeListContainer.Provider>{children}</PokeListContainer.Provider>;
+  return <PokemonContainer.Provider>{children}</PokemonContainer.Provider>;
 };
 
 export default Store;

@@ -99,14 +99,10 @@ module.exports = (options) => ({
         ],
       },
       {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(jpg|png|gif)$/i,
         use: [
           {
             loader: "url-loader",
-            options: {
-              // Inline files smaller than 10 kB
-              limit: 10 * 1024,
-            },
           },
           {
             loader: "image-webpack-loader",
@@ -125,7 +121,7 @@ module.exports = (options) => ({
                 optimizationLevel: 7,
               },
               pngquant: {
-                quality: "65-90",
+                quality: [.6, .9],
                 speed: 4,
               },
             },

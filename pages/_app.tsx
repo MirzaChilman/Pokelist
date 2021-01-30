@@ -1,5 +1,7 @@
 import Head from "next/head";
 import "../styles/globals.css";
+import Store from "../containers/Store";
+import Layout from "../components/Layout/Layout";
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -31,7 +33,11 @@ export default function MyApp({ Component, pageProps }) {
         <link rel="apple-touch-icon" href="/apple-icon.png"></link>
         <meta name="theme-color" content="#317EFB" />
       </Head>
-      <Component {...pageProps} />
+      <Store>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </Store>
     </>
   );
 }

@@ -1,27 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
-import Button from "../components/Button/Button";
 import Layout from "../components/Layout/Layout";
-import Menu from "../components/Menu/Menu";
-import { AiFillHome, AiOutlineUser } from "react-icons/ai";
-import { IMenu } from "../interfaces";
-const Menus: IMenu[] = [
-  { label: "Pokemon list", to: "/", icon: <AiFillHome /> },
-  { label: "My Profile", to: "/profile", icon: <AiOutlineUser /> },
-];
+import InfiniteScroll from "react-infinite-scroll-component";
+
+import PokemonContainer from "../containers/PokemonContainer/PokemonContainer";
+import Card from "components/Card/Card";
+import useLocalStorage from "../utils/useLocalStorage";
+
 
 export default function Home() {
+  const [ownedPokemon] = useLocalStorage<any>("ownedPokemon", "");
+  const pokemonContainers = PokemonContainer.useContainer();
+  const { fetchPokemon, pokemons } = pokemonContainers;
+  useEffect(() => {
+    fetchPokemon();
+  }, []);
   return (
     <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
-        <Button>adasd</Button>
       </Head>
-      <Layout>asdsa</Layout>
-      <div>
-        <Menu menus={Menus} />
-      </div>
+        <h3>Owned Pokemon: {ownedPokemon ? ownedPokemon.length : 0}</h3>
+        <InfiniteScroll
+          dataLength={pokemons.results.length} //This is important field to render the next data
+          next={fetchPokemon}
+          hasMore={true}
+          loader={<h4>Loading...</h4>}
+        >
+          {pokemons.results.map((result, index) => {
+            return (
+              <Card key={index + result.name} to={`/pokemon/${result.name}`}>
+                {result.name}
+              </Card>
+            );
+          })}
+        </InfiniteScroll>
     </div>
   );
 }

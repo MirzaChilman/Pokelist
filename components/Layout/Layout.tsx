@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
-
-export const BREAKPOINTS = {
-  sm: 576,
-  md: 768,
-  lg: 992,
-  xl: 1200,
-  xxl: 1600,
-};
+import Menu from "../Menu/Menu";
+import { AiFillHome, AiOutlineUser } from "react-icons/ai";
+import { IMenu } from "../../interfaces";
+import { BREAKPOINTS } from "../breakpoints";
+const Menus: IMenu[] = [
+  { label: "Pokemon list", to: "/", icon: <AiFillHome /> },
+  { label: "My Profile", to: "/profile", icon: <AiOutlineUser /> },
+];
 
 const StyledMain = styled("main")`
   margin: 0 auto;
@@ -21,7 +21,12 @@ const Layout = ({
 }: {
   children: React.ReactChild[] | React.ReactChild;
 }) => {
-  return <StyledMain>{children}</StyledMain>;
+  return (
+    <StyledMain>
+      <Menu menus={Menus} />
+      <span>{children}</span>
+    </StyledMain>
+  );
 };
 
 export default Layout;

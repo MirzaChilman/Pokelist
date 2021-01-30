@@ -21,11 +21,6 @@
     "jsx": "preserve",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "paths": {
-      "components/*": [
-        "./components/*"
-      ]
-    }
   },
   "exclude": [
     "node_modules",

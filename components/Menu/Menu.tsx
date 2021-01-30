@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
-import { BREAKPOINTS } from "../Layout/Layout";
+
 import { BACKGROUND, TEXT } from "../colors";
 import { IMenu } from "../../interfaces";
 
@@ -11,9 +11,11 @@ export interface MenuProps {
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  padding: 16px 16px;
   a {
     color: ${TEXT.COLOR.main};
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 
@@ -21,13 +23,14 @@ const Wrapper = styled.div`
   display: flex;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: calc(100% - 32px);
+  padding: 16px 0;
   background-color: ${BACKGROUND.COLOR.main};
   justify-content: space-evenly;
   overflow: overlay;
   text-align: center;
-  max-width: ${BREAKPOINTS.lg}px;
-  border-top: 1px solid ${BACKGROUND.COLOR.secondary}
+  max-width: 991px;
+  border-top: 1px solid ${BACKGROUND.COLOR.secondary};
 `;
 
 const Menu = (props: MenuProps) => {

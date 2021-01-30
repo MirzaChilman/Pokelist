@@ -79,8 +79,10 @@ const Detail = () => {
       const isNickNameExist = () => {
         return ownedPokemon.some((item) => item.nickName === pokemonName);
       };
-      if (isNickNameExist()) {
-        setAlertMessage("Duh lupa ya? kan yang namanya itu udah ada, coba nickname lain gih");
+      if (ownedPokemon.length > 0 && isNickNameExist()) {
+        setAlertMessage(
+          "Duh lupa ya? kan yang namanya itu udah ada, coba nickname lain gih"
+        );
         return;
       }
       const catchedPokemon = {

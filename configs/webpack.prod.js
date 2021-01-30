@@ -97,20 +97,20 @@ module.exports = require("./webpack.base.js")({
       short_name: "Pokelist",
       description: "Pokelist!",
       background_color: "#fafafa",
-      theme_color: "#b1624d",
+      theme_color: "#fd876a",
       inject: true,
       ios: true,
-      // icons: [
-      //   {
-      //     src: path.resolve("app/images/icon-512x512.png"),
-      //     sizes: [72, 96, 128, 144, 192, 384, 512],
-      //   },
-      //   {
-      //     src: path.resolve("app/images/icon-512x512.png"),
-      //     sizes: [120, 152, 167, 180],
-      //     ios: true,
-      //   },
-      // ],
+      icons: [
+        {
+          src: path.resolve("src/assets/android-chrome-512x512.png"),
+          sizes: [72, 96, 128, 144, 192, 384, 512],
+        },
+        {
+          src: path.resolve("src/assets/android-chrome-512x512.png"),
+          sizes: [120, 152, 167, 180],
+          ios: true,
+        },
+      ],
     }),
 
     new HashedModuleIdsPlugin({
@@ -118,29 +118,6 @@ module.exports = require("./webpack.base.js")({
       hashDigest: "hex",
       hashDigestLength: 20,
     }),
-    // Put it in the end to capture all the HtmlWebpackPlugin's
-    // new OfflinePlugin({
-    //   relativePaths: false,
-    //   publicPath: "/",
-    //   appShell: "/",
-    //   path: "/",
-    //
-    //   // No need to cache .htaccess. See http://mxs.is/googmp,
-    //   // this is applied before any match in `caches` section
-    //   excludes: [".htaccess"],
-    //   // ca
-    //   caches: {
-    //     main: [":rest:"],
-    //
-    //     // All chunks marked as `additional`, loaded after main section
-    //     // and do not prevent SW to install. Change to `optional` if
-    //     // do not want them to be preloaded at all (cached only when first loaded)
-    //     additional: ["*.chunk.js"],
-    //   },
-    //
-    //   // Removes warning for about `additional` section usage
-    //   safeToUseOptionalCaches: true,
-    // }),
     new WorkboxWebpackPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,

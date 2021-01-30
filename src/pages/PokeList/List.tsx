@@ -15,7 +15,7 @@ const List = () => {
 
   return (
     <>
-      <h1>Owned Pokemon : {ownedPokemon.length}</h1>
+      <h3>Owned Pokemon : {ownedPokemon.length}</h3>
       <InfiniteScroll
         dataLength={pokemons.results.length} //This is important field to render the next data
         next={fetchPokemon}
@@ -26,7 +26,6 @@ const List = () => {
           return (
             <Card key={index + result.name} to={`/pokemon/${result.name}`}>
               {result.name}
-              <img src={result.url} alt="" />
             </Card>
           );
         })}

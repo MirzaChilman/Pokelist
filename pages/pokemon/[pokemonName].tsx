@@ -141,7 +141,9 @@ const Detail = (props) => {
                 setPokemonName(event.target.value);
               }}
             />
-            <button onClick={savePokemon}>Simpan</button>
+            <button aria-label="Simpan" onClick={savePokemon}>
+              Simpan
+            </button>
           </div>
           {alertMessage && <AlertMessage>{alertMessage}</AlertMessage>}
         </Modal>
@@ -166,7 +168,7 @@ const Detail = (props) => {
           <div>
             <img
               src={pokemonDetail?.sprites?.front_default}
-              alt={pokemonDetail?.sprites?.front_default}
+              alt={`Pokemon ${props.pokemonName || ""}`}
               height={96}
               width={96}
             />
@@ -177,7 +179,9 @@ const Detail = (props) => {
               <p>{pokemonDetail.name}</p>
             </div>
             <div>
-              <Button onClick={handleCatchButtonClick}>Catch</Button>
+              <Button aria-label="Catch" onClick={handleCatchButtonClick}>
+                Catch
+              </Button>
             </div>
             <div>
               <h2>Types</h2>

@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Pokelist</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <h3>Owned Pokemon: {ownedPokemon ? ownedPokemon.length : 0}</h3>

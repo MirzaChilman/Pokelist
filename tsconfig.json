@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "esnext",
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,11 +21,15 @@
     "jsx": "preserve",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "paths": {
+      "components/*": [
+        "./components/*"
+      ]
+    }
   },
   "exclude": [
     "node_modules",
-    "dist",
-    "build"
+    "dist"
   ],
   "include": [
     "next-env.d.ts",

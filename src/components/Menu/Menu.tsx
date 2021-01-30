@@ -30,6 +30,7 @@ const Wrapper = styled.div`
   overflow: overlay;
   text-align: center;
   max-width: ${BREAKPOINTS.lg}px;
+  border-top: 1px solid ${BACKGROUND.COLOR.secondary}
 `;
 
 interface Something extends Omit<Menu, "to"> {}

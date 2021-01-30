@@ -19,6 +19,7 @@ export default function Home() {
       <Head>
         <title>Pokelist</title>
         <link rel="icon" href="/favicon.ico" />
+        <title lang="en">Pokelist</title>
       </Head>
         <h3>Owned Pokemon: {ownedPokemon ? ownedPokemon.length : 0}</h3>
         <InfiniteScroll

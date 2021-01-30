@@ -4,7 +4,42 @@ import Store from "../containers/Store";
 import Layout from "../components/Layout/Layout";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import styled from "@emotion/styled";
+import { AiOutlineShareAlt } from "react-icons/ai";
+const FloatingDiv = styled.div`
+  display: block;
+  position: absolute;
+  top: 28px;
+  right: 16px;
+  font-size: 32px;
+  :hover {
+    cursor: pointer;
+    color: wheat;
+  }
+`;
+
 export default function MyApp({ Component, pageProps }) {
+  const renderShareButton = () => {
+    return (
+      <FloatingDiv>
+        <AiOutlineShareAlt
+          onClick={() => {
+            if (navigator.share) {
+              navigator
+                .share({
+                  title: "Poke list",
+                  text: "Check out poke list.",
+                  url: "https://pokelist.vercel.app/",
+                })
+                .then(() => alert("Successful Share"))
+                .catch((error) => console.error(`Fail to share ${error}`));
+            }
+          }}
+        />
+      </FloatingDiv>
+    );
+  };
+
   return (
     <>
       <Head>
@@ -36,16 +71,17 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <Store>
         <Layout>
+          {renderShareButton()}
           <Component {...pageProps} />
           <ToastContainer
-              position="top-center"
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              draggable
-              pauseOnHover
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            draggable
+            pauseOnHover
           />
         </Layout>
       </Store>

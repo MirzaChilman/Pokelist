@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import PokemonContainer from "../../containers/PokemonContainer/PokemonContainer";
 import styled from "@emotion/styled";
-
-import { useRouter } from "next/router";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import useLocalStorage from "../../utils/useLocalStorage";
 import { toast } from "react-toastify";
 import Button from "../../components/Button/Button";
 import { BACKGROUND, BOX } from "components/colors";
+import OverlayLoading from "../../components/OverlayLoading/OverlayLoading";
 
 const Box = styled.div`
   margin: 8px 4px;
@@ -40,8 +39,15 @@ const AlertMessage = styled.p`
   padding: 8px;
 `;
 
-const Detail = () => {
-  const router = useRouter();
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      pokemonName: context.query.pokemonName,
+    },
+  };
+}
+
+const Detail = (props) => {
   const [ownedPokemon, setOwnedPokemon] = useLocalStorage<string>(
     "ownedPokemon",
     ""
@@ -57,7 +63,7 @@ const Detail = () => {
     fetchingPokemonDetail,
   } = pokemonContainer;
   useEffect(() => {
-    fetchPokemonDetail(String(router.query.pokemonName));
+    fetchPokemonDetail(props.pokemonName);
   }, []);
 
   const handleCatchButtonClick = () => {
@@ -189,7 +195,7 @@ const Detail = () => {
           <div></div>
         </div>
       )}
-      {fetchingPokemonDetail && "Loading . . ."}
+      {fetchingPokemonDetail && <OverlayLoading />}
     </Box>
   );
 };

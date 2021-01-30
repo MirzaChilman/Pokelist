@@ -2,7 +2,8 @@ import Head from "next/head";
 import "../styles/globals.css";
 import Store from "../containers/Store";
 import Layout from "../components/Layout/Layout";
-
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -36,6 +37,16 @@ export default function MyApp({ Component, pageProps }) {
       <Store>
         <Layout>
           <Component {...pageProps} />
+          <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              draggable
+              pauseOnHover
+          />
         </Layout>
       </Store>
     </>

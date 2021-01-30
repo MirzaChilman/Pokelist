@@ -6,14 +6,14 @@ import { IMenu } from "../../interfaces";
 import { BREAKPOINTS } from "../breakpoints";
 const Menus: IMenu[] = [
   { label: "Pokemon list", to: "/", icon: <AiFillHome /> },
-  { label: "My Profile", to: "/profile", icon: <AiOutlineUser /> },
+  { label: "My Pokemon", to: "/profile", icon: <AiOutlineUser /> },
 ];
 
 const StyledMain = styled("main")`
   margin: 0 auto;
   max-width: ${BREAKPOINTS.lg}px;
   padding: 16px;
-  padding-bottom: 160px;
+  padding-bottom: 75px;
 `;
 
 const Layout = ({

@@ -13,9 +13,6 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   a {
     color: ${TEXT.COLOR.main};
-    &:hover {
-      cursor: pointer;
-    }
   }
 `;
 
@@ -33,6 +30,12 @@ const Wrapper = styled.div`
   border-top: 1px solid ${BACKGROUND.COLOR.secondary};
 `;
 
+const LinkWrapper = styled.div`
+  :hover {
+    cursor: pointer;
+  }
+`;
+
 const Menu = (props: MenuProps) => {
   const { menus } = props;
   return (
@@ -41,13 +44,15 @@ const Menu = (props: MenuProps) => {
         menus.map((menu) => {
           const { to, label, icon } = menu;
           return (
-            <StyledLink href={to} key={label + to}>
-              <span>
-                {icon}
-                &nbsp;
-                {label}
-              </span>
-            </StyledLink>
+            <LinkWrapper>
+              <StyledLink href={to} key={label + to}>
+                <span>
+                  {icon}
+                  &nbsp;
+                  {label}
+                </span>
+              </StyledLink>
+            </LinkWrapper>
           );
         })}
     </Wrapper>

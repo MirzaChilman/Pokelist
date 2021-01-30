@@ -7,8 +7,8 @@ import { AiFillHome, AiOutlineUser, AiOutlineShareAlt } from "react-icons/ai";
 import { Switch, Route } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import styled from "@emotion/styled";
 import { isMobile, isTablet } from "react-device-detect";
+import styled from "@emotion/styled";
 const PokeList = lazy(() => import("./pages/PokeList/List"));
 const PokeDetail = lazy(() => import("./pages/PokeList/Detail"));
 const Profile = lazy(() => import("./pages/Profile/Profile"));
@@ -31,6 +31,7 @@ const FloatingDiv = styled.div`
 `;
 
 const App = () => {
+  const isHttps = window.location.protocol === "https";
   const renderShareButton = () => {
     return (
       <FloatingDiv>
@@ -53,8 +54,8 @@ const App = () => {
   };
   return (
     <Suspense fallback={OverlayLoading}>
-      {renderShareButton()}
       <Layout>
+        {isHttps && isMobile && isTablet && renderShareButton()}
         <Switch>
           <Route exact path={"/"} component={PokeList} />
           <Route exact path={"/pokemon/:pokemonName"} component={PokeDetail} />

@@ -5,6 +5,8 @@ import Menu from "./components/Menu/Menu";
 import Layout from "./components/Layout/Layout";
 import { AiFillHome, AiOutlineUser } from "react-icons/ai";
 import { Switch, Route } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const PokeList = lazy(() => import("./pages/PokeList/List"));
 const PokeDetail = lazy(() => import("./pages/PokeList/Detail"));
@@ -25,9 +27,19 @@ const App = () => {
           <Route exact path={"/profile"} component={Profile} />
           <Route component={Notfound} />
         </Switch>
-
-        <Menu menus={MyMenu} />
       </Layout>
+      <Menu menus={MyMenu} />
+
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        draggable
+        pauseOnHover
+      />
     </Suspense>
   );
 };

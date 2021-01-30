@@ -14,8 +14,6 @@ module.exports = function addProdMiddlewares(app, options) {
   app.use(publicPath, express.static(outputPath));
 
   app.get("*", (req, res) => {
-    console.log("publicPath", publicPath);
-    console.log("outputPath", outputPath);
     res.sendFile(path.resolve(outputPath, "index.html"));
   });
 };

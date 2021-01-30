@@ -6,17 +6,38 @@ import { useParams } from "react-router-dom";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import useLocalStorage from "../../utils/useLocalStorage";
+import { toast } from "react-toastify";
+import Button from "../../components/Button/Button";
+
 const Box = styled.div`
-  margin: 16px;
+  margin: 8px 4px;
   padding: 16px;
   border: 1px solid ${BOX.COLOR.border};
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
-const ModalStyle = {
+const ModalStyleSuccess = {
   modal: {
-    background: BACKGROUND.COLOR.secondary,
+    background: BACKGROUND.COLOR.success,
   },
 };
+
+const ModalStyleDanger = {
+  modal: {
+    background: BACKGROUND.COLOR.danger,
+  },
+};
+
+const AlertMessage = styled.p`
+  background-color: ${BACKGROUND.COLOR.danger};
+  color: white;
+  margin-top: 8px;
+  padding: 8px;
+`;
 
 const Detail = () => {
   const params = useParams<{ pokemonName: string }>();
@@ -25,9 +46,9 @@ const Detail = () => {
     ""
   );
   const [pokemonName, setPokemonName] = useState<string>("");
-
   const [openSuccessModal, setOpenSuccessModal] = useState<boolean>(false);
   const [openFailModal, setOpenFailModal] = useState<boolean>(false);
+  const [alertMessage, setAlertMessage] = useState<string>("");
   const pokemonContainer = PokemonContainer.useContainer();
   const {
     fetchPokemonDetail,
@@ -55,39 +76,63 @@ const Detail = () => {
 
   const renderModal = () => {
     const savePokemon = () => {
+      const isNickNameExist = () => {
+        return ownedPokemon.some((item) => item.nickName === pokemonName);
+      };
+      if (isNickNameExist()) {
+        setAlertMessage("Duh lupa ya? kan yang namanya itu udah ada, coba nickname lain gih");
+        return;
+      }
       const catchedPokemon = {
         name: pokemonDetail.name,
         nickName: pokemonName,
         image: pokemonDetail.sprites.front_default,
       };
+
       (setOwnedPokemon as any)((prevState) => {
         if (prevState) {
           return [...prevState, catchedPokemon];
         }
         return [catchedPokemon];
       });
+      toast.success("Wah berhasil berhasil, cek profil anda gan!", {
+        position: "top-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      setPokemonName("");
       setOpenSuccessModal(false);
     };
     return (
       <>
         <Modal
-          styles={ModalStyle}
+          styles={ModalStyleSuccess}
           open={openSuccessModal}
           onClose={() => setOpenSuccessModal(false)}
         >
           <h2>Demi Apa??</h2>
           <h3>Kamu Berhasil Menangkapnya</h3>
           <h4>Beri pokemon mu nama tuan, biar semakin wantap wantap</h4>
-          <input
-            type="text"
-            value={pokemonName}
-            placeholder={"Nama Pokemon mu tuan"}
-            onChange={(event) => setPokemonName(event.target.value)}
-          />
-          <button onClick={savePokemon}>Simpan</button>
+          <div>
+            <input
+              type="text"
+              value={pokemonName}
+              placeholder={"Nama Pokemon mu tuan"}
+              onChange={(event) => {
+                setAlertMessage("");
+                setPokemonName(event.target.value);
+              }}
+            />
+            <button onClick={savePokemon}>Simpan</button>
+          </div>
+          {alertMessage && <AlertMessage>{alertMessage}</AlertMessage>}
         </Modal>
         <Modal
-          styles={ModalStyle}
+          styles={ModalStyleDanger}
           open={openFailModal}
           onClose={() => setOpenFailModal(false)}
         >
@@ -103,13 +148,7 @@ const Detail = () => {
     <Box>
       {renderModal()}
       {!fetchingPokemonDetail && pokemonDetail && (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            textAlign: "center",
-          }}
-        >
+        <div className="wrapper">
           <div>
             <img
               src={pokemonDetail?.sprites?.front_default}
@@ -120,25 +159,26 @@ const Detail = () => {
           </div>
           <div>
             <div>
-              <h5>Name</h5>
+              <h2>Name</h2>
               <p>{pokemonDetail.name}</p>
             </div>
             <div>
-              <button onClick={handleCatchButtonClick}>Catch</button>
+              <Button onClick={handleCatchButtonClick}>Catch</Button>
             </div>
             <div>
-              <h5>Types</h5>
+              <h2>Types</h2>
               {pokemonDetail.types.map((type) => {
                 return <p>{type.type.name}</p>;
               })}
             </div>
             <div>
-              <h5>Moves</h5>
+              <h2>Moves</h2>
               {pokemonDetail.moves.map((move) => {
                 return <p>{move.move.name}</p>;
               })}
             </div>
           </div>
+          <div></div>
         </div>
       )}
       {fetchingPokemonDetail && "Loading . . ."}

@@ -5,6 +5,7 @@ import Layout from "../components/Layout/Layout";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import styled from "@emotion/styled";
+import { isMobile, isTablet } from "react-device-detect";
 import { AiOutlineShareAlt } from "react-icons/ai";
 const FloatingDiv = styled.div`
   display: block;
@@ -49,7 +50,10 @@ export default function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"
         />
-        <meta name="description" content="Where you can catch em all, go catch em!" />
+        <meta
+          name="description"
+          content="Where you can catch em all, go catch em!"
+        />
         <meta name="keywords" content="pokemon, pokedex, next, catch, em" />
         <title lang="en">Pokelist</title>
 
@@ -71,7 +75,7 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <Store>
         <Layout>
-          {renderShareButton()}
+          {isMobile && isTablet && renderShareButton()}
           <Component {...pageProps} />
           <ToastContainer
             position="top-center"

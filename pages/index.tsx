@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Button from "../components/Button/Button";
 import Layout from "../components/Layout/Layout";
 import Menu from "../components/Menu/Menu";

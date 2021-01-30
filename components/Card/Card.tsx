@@ -35,7 +35,7 @@ interface Card
 const Card = (props: Card) => {
   const { children, to, hoverable = true } = props;
   return to ? (
-    <Link to={to}>
+    <Link href={to}>
       <Component hoverable={hoverable}>{children}</Component>
     </Link>
   ) : (

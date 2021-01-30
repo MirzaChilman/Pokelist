@@ -7,12 +7,8 @@ import {
   PokemonResponse,
 } from "./PokemonContainerModel";
 
-type EventTypes = {
-  success: string;
-};
 
 const DEFAULT_LIMIT = 20;
-const DEFAULT_STATE = {};
 const Container = () => {
   const [testState, setTestState] = useState<string>("asdas");
   const [fetchingPokemons, setFetchingPokemons] = useState<boolean>(false);

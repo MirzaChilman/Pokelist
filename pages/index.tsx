@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
-import Layout from "../components/Layout/Layout";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import PokemonContainer from "../containers/PokemonContainer/PokemonContainer";

@@ -11,24 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86869522-b549-4f7c-a765-40819df162d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/breakpoints.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/containers/PokemonContainer/PokemonContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/containers/PokemonContainer/PokemonContainerModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/containers/Store.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/pokemon/[pokemonName].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/axios/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/useLocalStorage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Menu/Menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sw.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/sw.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/containers/PokemonContainer/PokemonContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/containers/PokemonContainer/PokemonContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +106,7 @@
       <workItem from="1611844098040" duration="11046000" />
       <workItem from="1611899403466" duration="33169000" />
       <workItem from="1611975238232" duration="18940000" />
-      <workItem from="1612005428646" duration="8357000" />
+      <workItem from="1612005428646" duration="8789000" />
     </task>
     <servers />
   </component>
@@ -175,10 +158,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="144" y="246" key="run.anything.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1611937856803" />
-    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1612013342888">
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1612014210580">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1612013342888" />
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1612014210580" />
     <state x="2543" y="215" width="672" height="696" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1611905321547" />
     <state x="205" y="435" width="540" height="208" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1612006015691">
       <screen x="0" y="27" width="1920" height="1053" />

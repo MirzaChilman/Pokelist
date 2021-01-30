@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { createContainer } from "unstated-next";
-import BaseAppEvent from "../../utils/BaseAppEvent";
 import axios from "axios";
 import apiClient from "../../services/axios";
 import {

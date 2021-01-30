@@ -16,22 +16,6 @@ const List = () => {
   return (
     <>
       <h3>Owned Pokemon : {ownedPokemon.length}</h3>
-      <button
-        onClick={() => {
-          if (navigator.share) {
-            navigator
-              .share({
-                title: "Poke list",
-                text: "Check out poke list.",
-                url: "https://pokelist.vercel.app/",
-              })
-              .then(() => alert("Successful Share"))
-              .catch((error) => alert(`fail to share ${error}`));
-          }
-        }}
-      >
-        Share
-      </button>
       <InfiniteScroll
         dataLength={pokemons.results.length} //This is important field to render the next data
         next={fetchPokemon}
@@ -42,7 +26,6 @@ const List = () => {
           return (
             <Card key={index + result.name} to={`/pokemon/${result.name}`}>
               {result.name}
-              <img src={result.url} alt="" />
             </Card>
           );
         })}

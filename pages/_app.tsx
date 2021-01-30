@@ -49,8 +49,8 @@ export default function MyApp({ Component, pageProps }) {
           name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"
         />
-        <meta name="description" content="Description" />
-        <meta name="keywords" content="Keywords" />
+        <meta name="description" content="Where you can catch em all, go catch em!" />
+        <meta name="keywords" content="pokemon, pokedex, next, catch, em" />
         <title lang="en">Pokelist</title>
 
         <link rel="manifest" href="/manifest.json" />

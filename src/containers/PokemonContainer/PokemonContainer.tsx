@@ -61,7 +61,6 @@ const Container = () => {
     try {
       setFetchingPokemonDetail(true);
       const response = await apiClient.get(`pokemon/${name}`);
-      console.log(response)
       setPokemonDetail(response.data);
     } catch (error) {
       console.error(error);

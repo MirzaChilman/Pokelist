@@ -22,4 +22,14 @@ if (process.env.NODE_ENV === "production") {
       navigator.serviceWorker.register("/service-worker.js");
     });
   }
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "Poke list",
+        text: "Check out poke list.",
+        url: "https://pokelist.vercel.app/",
+      })
+      .then(() => alert("Successful Share"))
+      .catch((error) => alert(`fail to share ${error}`));
+  }
 }

@@ -97,7 +97,7 @@ module.exports = require("./webpack.base.js")({
       short_name: "Pokelist",
       description: "Pokelist!",
       background_color: "#fafafa",
-      theme_color: "#b1624d",
+      theme_color: "#fd876a",
       inject: true,
       ios: true,
       icons: [

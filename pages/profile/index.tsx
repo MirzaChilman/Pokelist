@@ -41,9 +41,9 @@ const Profile = () => {
   const renderNoPokemonOwned = () => {
     return (
       <div data-testid={ProfileLocators.noPokemon}>
-        <p> Oh la da la, Kamu tidak punya pokemon</p>
+        <p>What is this my lord, you have not catch any pokemon</p>
         <div>
-          Go Catch Em all gih &nbsp;
+          Let's Go and Go Catch Em all  &nbsp;
           <Link href="/">
             <Button>Back to home</Button>
           </Link>

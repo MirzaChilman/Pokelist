@@ -10,7 +10,6 @@ import {
 
 const DEFAULT_LIMIT = 20;
 const Container = () => {
-  const [testState, setTestState] = useState<string>("asdas");
   const [fetchingPokemons, setFetchingPokemons] = useState<boolean>(false);
   const [fetchingPokemonDetail, setFetchingPokemonDetail] = useState<boolean>(
     false
@@ -65,8 +64,6 @@ const Container = () => {
   };
 
   return {
-    testState,
-    setTestState,
     fetchPokemon,
     pokemons,
     fetchingPokemons,

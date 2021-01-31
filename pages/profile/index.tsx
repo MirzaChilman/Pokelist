@@ -4,6 +4,7 @@ import useLocalStorage from "../../utils/useLocalStorage";
 import styled from "@emotion/styled";
 import Button from "../../components/Button/Button";
 import { toast } from "react-toastify";
+import {ProfileLocators} from "../../tests/locators";
 import Link from "next/link";
 
 const NameBox = styled.div`
@@ -39,7 +40,7 @@ const Profile = () => {
 
   const renderNoPokemonOwned = () => {
     return (
-      <div>
+      <div data-testid={ProfileLocators.noPokemon}>
         <p> Oh la da la, Kamu tidak punya pokemon</p>
         <div>
           Go Catch Em all gih &nbsp;

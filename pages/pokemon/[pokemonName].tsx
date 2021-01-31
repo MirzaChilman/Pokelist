@@ -90,7 +90,7 @@ const Detail = (props) => {
       };
       if (ownedPokemon.length > 0 && isNickNameExist()) {
         setAlertMessage(
-          "Oh my, did you forget? You already user that nickname, use another"
+          "Oh my, did you forget? You already use that nickname, use another"
         );
         return;
       }

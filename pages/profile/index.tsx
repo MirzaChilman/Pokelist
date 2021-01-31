@@ -4,6 +4,7 @@ import useLocalStorage from "../../utils/useLocalStorage";
 import styled from "@emotion/styled";
 import Button from "../../components/Button/Button";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const NameBox = styled.div`
   display: flex;
@@ -40,7 +41,12 @@ const Profile = () => {
     return (
       <div>
         <p> Oh la da la, Kamu tidak punya pokemon</p>
-        <p>Go Catch Em</p>
+        <div>
+          Go Catch Em all gih &nbsp;
+          <Link href="/">
+            <Button>Back to home</Button>
+          </Link>
+        </div>
       </div>
     );
   };

@@ -90,7 +90,13 @@ const Detail = (props) => {
       };
       if (ownedPokemon.length > 0 && isNickNameExist()) {
         setAlertMessage(
-          "Oh my, did you forget? You already got pokemon with that nickname, change to other nickname please"
+          "Oh my, did you forget? You already user that nickname, use another"
+        );
+        return;
+      }
+      if(!pokemonName){
+        setAlertMessage(
+            "Give it nickname my lord"
         );
         return;
       }

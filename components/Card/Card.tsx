@@ -30,16 +30,17 @@ interface Card
   > {
   to?: string;
   hoverable?: boolean;
+  dataTestids?: string
 }
 
 const Card = (props: Card) => {
-  const { children, to, hoverable = true } = props;
+  const { children, to, hoverable = true, dataTestids } = props;
   return to ? (
     <Link href={to}>
-      <Component hoverable={hoverable}>{children}</Component>
+      <Component data-testid={dataTestids} hoverable={hoverable}>{children}</Component>
     </Link>
   ) : (
-    <Component hoverable={hoverable}>{children}</Component>
+    <Component data-testid={dataTestids} hoverable={hoverable}>{children}</Component>
   );
 };
 

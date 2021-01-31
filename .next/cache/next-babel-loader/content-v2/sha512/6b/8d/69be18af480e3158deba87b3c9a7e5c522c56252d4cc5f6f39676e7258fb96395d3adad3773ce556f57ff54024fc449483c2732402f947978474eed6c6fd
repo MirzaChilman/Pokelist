@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const TEXT = {\n  COLOR: {\n    main: \"#ececec\"\n  }\n};\nexport const BACKGROUND = {\n  COLOR: {\n    main: \"#30475e\",\n    secondary: \"#f2a365\",\n    danger: \"#dd4444\",\n    success: \"#4db875\"\n  }\n};\nexport const BOX = {\n  COLOR: {\n    border: \"#f2a365\"\n  }\n};","map":null,"metadata":{},"sourceType":"module"}

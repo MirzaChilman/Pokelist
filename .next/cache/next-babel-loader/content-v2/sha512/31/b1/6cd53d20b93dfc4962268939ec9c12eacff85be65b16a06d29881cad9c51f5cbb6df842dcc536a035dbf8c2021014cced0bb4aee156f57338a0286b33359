@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var BREAKPOINTS = {\n  sm: 576,\n  md: 768,\n  lg: 992,\n  xl: 1200,\n  xxl: 1600\n};","map":null,"metadata":{},"sourceType":"module"}

@@ -28,11 +28,15 @@ const Wrapper = styled.div`
   text-align: center;
   max-width: 991px;
   border-top: 1px solid ${BACKGROUND.COLOR.secondary};
+  z-index: 2;
 `;
 
 const LinkWrapper = styled.div`
   :hover {
     cursor: pointer;
+  }
+  :active {
+    color: ${BACKGROUND.COLOR.secondary};
   }
 `;
 

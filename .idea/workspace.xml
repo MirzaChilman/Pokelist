@@ -12,7 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="86869522-b549-4f7c-a765-40819df162d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/profile/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,18 +152,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="0" y="135" width="954" height="807" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1611936329274" />
-    <state x="496" y="262" width="1421" height="554" key="find.popup" timestamp="1612017500477">
+    <state x="492" y="262" width="1421" height="554" key="find.popup" timestamp="1612071188140">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="496" y="262" width="1421" height="554" key="find.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1612017500477" />
+    <state x="492" y="262" width="1421" height="554" key="find.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1612071188140" />
     <state x="144" y="246" key="run.anything.popup" timestamp="1611937856803">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="144" y="246" key="run.anything.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1611937856803" />
-    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1612065387430">
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1612071312014">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1612065387430" />
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1612071312014" />
     <state x="2543" y="215" width="672" height="696" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1611905321547" />
     <state x="205" y="435" width="540" height="208" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1612015050988">
       <screen x="0" y="27" width="1920" height="1053" />

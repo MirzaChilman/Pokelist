@@ -94,10 +94,8 @@ const Detail = (props) => {
         );
         return;
       }
-      if(!pokemonName){
-        setAlertMessage(
-            "Give it nickname my lord"
-        );
+      if (!pokemonName) {
+        setAlertMessage("Give it nickname my lord");
         return;
       }
       const catchedPokemon = {
@@ -131,6 +129,7 @@ const Detail = (props) => {
           open={openSuccessModal}
           onClose={() => {
             setPokemonName("");
+            setAlertMessage("");
             setOpenSuccessModal(false);
           }}
         >

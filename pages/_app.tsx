@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import styled from "@emotion/styled";
 import { isMobile, isTablet } from "react-device-detect";
 import { AiOutlineShareAlt } from "react-icons/ai";
+
 const FloatingDiv = styled.div`
   display: block;
   position: absolute;
@@ -75,7 +76,7 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <Store>
         <Layout>
-          {isMobile && isTablet && renderShareButton()}
+          {(isMobile || isTablet) && renderShareButton()}
           <Component {...pageProps} />
           <ToastContainer
             position="top-center"

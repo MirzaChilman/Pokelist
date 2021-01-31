@@ -26,7 +26,7 @@ const Profile = () => {
       (ownedPokemon as any).filter((pokemon) => {
         return pokemon.nickName !== nickName;
       });
-    toast.success(`${nickName} sudah dilepaskan`, {
+    toast.success(`${nickName} already been released`, {
       position: "top-center",
       autoClose: 2000,
       hideProgressBar: false,

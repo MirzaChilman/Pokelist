@@ -90,7 +90,7 @@ const Detail = (props) => {
       };
       if (ownedPokemon.length > 0 && isNickNameExist()) {
         setAlertMessage(
-          "Duh lupa ya? kan yang namanya itu udah ada, coba nickname lain gih"
+          "Oh my, did you forget? You already got pokemon with that nickname, change to other nickname please"
         );
         return;
       }
@@ -106,7 +106,7 @@ const Detail = (props) => {
         }
         return [catchedPokemon];
       });
-      toast.success("Wah berhasil berhasil, cek profil anda gan!", {
+      toast.success("Good lord, you got it, check your profile now!", {
         position: "top-center",
         autoClose: 4000,
         hideProgressBar: false,
@@ -128,21 +128,21 @@ const Detail = (props) => {
             setOpenSuccessModal(false);
           }}
         >
-          <h2>Demi Apa??</h2>
-          <h3>Kamu Berhasil Menangkapnya</h3>
-          <h4>Beri pokemon mu nama tuan, biar semakin wantap wantap</h4>
+          <h2>For real?</h2>
+          <h3>You succeed catch it</h3>
+          <h4>Give your pokemon nickname my lord</h4>
           <div>
             <input
               type="text"
               value={pokemonName}
-              placeholder={"Nama Pokemon mu tuan"}
+              placeholder={"Your pokemon nickname"}
               onChange={(event) => {
                 setAlertMessage("");
                 setPokemonName(event.target.value);
               }}
             />
-            <button aria-label="Simpan" onClick={savePokemon}>
-              Simpan
+            <button aria-label="save" onClick={savePokemon}>
+              Save
             </button>
           </div>
           {alertMessage && <AlertMessage>{alertMessage}</AlertMessage>}
@@ -152,9 +152,8 @@ const Detail = (props) => {
           open={openFailModal}
           onClose={() => setOpenFailModal(false)}
         >
-          <h2>Gagal</h2>
-          <h3>Sayang sekali coba lagi sampai sayang,</h3>
-          <h3>Eh sampai dapat maksudnya</h3>
+          <h2>Failed</h2>
+          <h3>Too bad, try again until you succeed</h3>
         </Modal>
       </>
     );

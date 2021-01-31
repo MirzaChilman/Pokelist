@@ -1,1 +1,0 @@
-{"ast":null,"code":"import Link from \"next/link\";\nimport styled from \"@emotion/styled\";\nimport { TEXT } from \"../colors\";\nconst StyledLink = styled(Link)`\n  text-decoration: none;\n  color: ${TEXT.COLOR.main};\n`;\nexport default StyledLink;","map":null,"metadata":{},"sourceType":"module"}

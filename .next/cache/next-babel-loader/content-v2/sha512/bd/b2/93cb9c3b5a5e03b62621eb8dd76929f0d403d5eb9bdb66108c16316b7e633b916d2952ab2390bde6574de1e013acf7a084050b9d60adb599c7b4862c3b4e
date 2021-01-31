@@ -1,1 +1,0 @@
-{"ast":null,"code":"export var TEXT = {\n  COLOR: {\n    main: \"#ececec\"\n  }\n};\nexport var BACKGROUND = {\n  COLOR: {\n    main: \"#30475e\",\n    secondary: \"#f2a365\",\n    danger: \"#dd4444\",\n    success: \"#4db875\"\n  }\n};\nexport var BOX = {\n  COLOR: {\n    border: \"#f2a365\"\n  }\n};","map":null,"metadata":{},"sourceType":"module"}

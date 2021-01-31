@@ -11,7 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86869522-b549-4f7c-a765-40819df162d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,10 +159,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="144" y="246" key="run.anything.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1611937856803" />
-    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1612019069305">
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1612065387430">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1612019069305" />
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1612065387430" />
     <state x="2543" y="215" width="672" height="696" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1611905321547" />
     <state x="205" y="435" width="540" height="208" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1612015050988">
       <screen x="0" y="27" width="1920" height="1053" />

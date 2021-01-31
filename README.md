@@ -6,7 +6,7 @@ Hence, I move this project and created it using `nextjs` so I can deploy it in [
 
 ## How to run
 
-1. In order to run you need to run `yarn install first`
+1. In order to run you need to run `yarn install` first
 2. Once the dependencies are installed you can `yarn dev` to run for development, further info please refer to [Next.js](https://nextjs.org/) official page
 
 ## Project Structures
